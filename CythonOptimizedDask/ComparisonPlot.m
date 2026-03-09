@@ -1,0 +1,11 @@
+unop = [ 0.05802989,  0.32853079,  4.11582589 ,36.11175156];
+op = [ 0.0454886 ,  0.31518149 , 3.23321772, 31.5045383 ];
+nop = [10000, 100000,1000000 ,10000000 ];
+figure;
+semilogx(nop,unop, 'r-', 'DisplayName', 'Pure Python');
+hold on;
+semilogx(nop,op, 'b-', 'DisplayName', 'Cython Optimized');
+legend show;
+xlabel('No. of particles');
+ylabel('Time(s)');
+title('Performance Comparison');
